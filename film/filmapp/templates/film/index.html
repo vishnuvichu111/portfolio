@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+ <img src="{% static 'image/9.jpg' %}"" style="width:100%">
+
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>GALLERY</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Mohanlal</h1>
+    <p>Actor, Producer, Film Director</p>
+    <img src= "{% static 'image/mo.jpg' %}" alt="boy" class="w3-image" width="992" height="1108">
+
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">About</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Mohanlal is an Indian actor who works predominantly in South Indian movies. He has enacted a wide range of characters. Mohanlal has done more than 300 movies and has bagged Four National Film Awards and Nine State Film Awards. He debuted as an antagonist in the movie ' Manjil Virinja Pookal' in the year 1980. He has acted in Hindi, Tamil, Telugu and Kannada movies also. The Government of India has honored him with "Padma Shri". This website is the official website of actor Mohanlal.
+    </p>
+
+    <p class="w3-wide">Actor</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Film Director</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Playback Singer</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">40</span><br>
+        Years of acting
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">300+</span><br>
+        Movies
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">5</span><br>
+        National Awards
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge"></span><br>
+        lieutenant colonel
+      </div>
+    </div>
+
+
+
+    <!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16 w3-text-light-grey">Awards & Recognition</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Best Actor
+2000</li>
+          <li class="w3-padding-16">Home About Lal Awards & Recognition
+Padma Bhushan - Third Highest Civilian Award
+2019</li>
+          <li class="w3-padding-16">Special Jury Award - 64th National Film Award
+2017</li>
+          <li class="w3-padding-16">Honorary Doctorate
+2012e</li>
+          <li class="w3-padding-16">Honorary Lieutenant Colonel
+2009</li>
+          <li class="w3-padding-16">
+            <h2>IIFA Awards
+2002</h2>
+
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Padmasree
+2001</b
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Best Film ( Producer )
+2000</li>
+          <li class="w3-padding-16">Special Jury Award
+1989</li>
+          <li class="w3-padding-16">Best Actor
+1991</li>
+          <li class="w3-padding-16">2009	Filmfare Special Jury Award</li>
+          <li class="w3-padding-16">2005	Most Popular Actor</li>
+          <li class="w3-padding-16">
+            <h2>	Natana Ratna Award</h2>
+            <span class="w3-opacity">    2001</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">2003	Special Jury Awardp</button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+
+    <!-- Testimonials -->
+    <h3 class="w3-padding-24 w3-text-light-grey">Biography</h3>
+
+    <p><span class="w3-large w3-margin-right">
+
+Born In Pathanamthitta, Kerala</span> 21 May 1960</p>
+    <p>1980
+
+Star Rise</p><br>
+
+
+    <p><span class="w3-large w3-margin-right">1986.</span>
+
+Super Stardom In Malayalam Cinema</p>
+    <p>1990
+
+The Golden Years</p>
+  <!-- End About Section -->
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src= "{% static 'image/9.jpg' %}"style="width:100%" height="400">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <<img src= "{% static 'image/7.jpg' %}" style="width:100%"height="380">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src= "{% static 'image/8.jpg' %}" style="width:100%"height="400">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src= "{% static 'image/3.jpg' %}" style="width:100%"height="400">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+   <img src= "{% static 'image/1.jpg' %}" style="width:100%"height="400">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src= "{% static 'image/6.jpg' %}" style="width:100%"height="400">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src= "{% static 'image/9.jpg' %}" style="width:100%" height="130" onclick="currentSlide(1)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "{% static 'image/7.jpg' %}" style="width:100%" height="130" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "{% static 'image/8.jpg' %}" style="width:100%" height="130" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+     <img class="demo cursor" src= "{% static 'image/3.jpg' %}" style="width:100%" height="130" onclick="currentSlide(4)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "{% static 'image/1.jpg' %}" style="width:100%" height="130" onclick="currentSlide(5)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "{% static 'image/6.jpg' %}" style="width:100%" height="130" onclick="currentSlide(6)" >
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+     <div class="w3-padding-64 w3-content">
+    <h2 class="w3-text-light-grey">Videos</h2>
+    <hr style="width:100px" class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+          <video height="300px" width="500px" autoplay loop muted="background">
+   <source src="{% static 'image/2.mp4' %}" type="video/mp4" >
+
+  </video>
+                <video height="300px" width="500px" autoplay loop muted="background">
+   <source src="{% static 'image/1.mp4' %}" type="video/mp4" >
+
+  </video>
+      </div>
+
+      <div class="w3-half">
+                <video height="300px" width="500px" autoplay loop muted="background">
+   <source src="{% static 'image/3.mp4' %}" type="video/mp4" >
+
+
+
+
+  </video>
+             <video height="300px" width="500px" autoplay loop muted="background">
+   <source src="{% static 'image/Lucifer mass whatsapp status.mp4' %}" type="video/mp4" >
+
+
+  </video>
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Kakkanad,Kerala</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +919048653303</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: mohanlal@mail.com</p>
+    </div><br>
+    <p>Let's get in touch. Send me a message:</p>
+
+<form action="" method="post">
+                {%csrf_token%}
+                 <table>
+{{ form.as_table }}
+</table>
+        <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+            </form>
+
+
+
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
